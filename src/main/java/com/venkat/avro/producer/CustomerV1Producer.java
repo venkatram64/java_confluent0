@@ -22,7 +22,7 @@ public class CustomerV1Producer {
         properties.put("acks","1");
         properties.put("retries", "10");
         properties.put("schema.registry.url", "http://192.168.99.100:8081");
-        this.topicName = "customer10-avro";
+        this.topicName = "customer11-avro";
 
         kafkaProducer = new KafkaProducer<String, Customer>(properties);
     }

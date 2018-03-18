@@ -10,6 +10,6 @@
         {"name": "age","type": "int", "doc":"Age at the time of registration"} ,
         {"name": "height","type": "float", "doc":"Height at the time of registration in cm"} ,
         {"name": "weight","type": "float", "doc":"Weight at the time of registration in kg"} ,
-        {"name": "automated_email","type": "boolean","default":"true", "doc":"Sending emails to Customer"}
+        {"name": "automated_email","type": "boolean","default":true, "doc":"Sending emails to Customer"}
     ]
 }

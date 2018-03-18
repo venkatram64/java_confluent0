@@ -29,7 +29,7 @@ public class CustomerV1Consumer {
         properties.put("auto.offset.reset","earliest"); //from beginning
         properties.put("specific.avro.reader", "true");
 
-        this.topicName = "customer10-avro";
+        this.topicName = "customer11-avro";
         this.kafkaConsumer = new KafkaConsumer(properties);
         this.kafkaConsumer.subscribe(Collections.singleton(this.topicName));
         System.out.println("Waiting for data!!!");
