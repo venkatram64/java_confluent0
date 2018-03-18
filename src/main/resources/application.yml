@@ -1,0 +1,28 @@
+KafkaDestinationSettings:
+  topicName: customer-avro
+  bootstrapServiceConfig: 192.168.99.100:9092
+  zookeeperUrl: 192.168.99.100:2181
+  acks: 1
+  retries: 10
+  schemaRegistryUrl: http://192.168.99.100:8081
+
+KafkaLocalDestinationSettings:
+  topicName: TestTopic
+  bootstrapServiceConfig: localhost:9092
+  zookeeperUrl: localhost:2181
+
+TopicTemplate:
+  title: TopicConfig for testing
+  recreateTopic: true
+  topicDefinition:
+  topicPrefix: my
+  partitions: 12
+  replicas: 1
+  kafkaConfig:
+    delete.retention.ms: 3600000
+    cleanup.policy: compact
+    min.compaction.lag.ms: 0
+    segment.ms: 3600000
+
+
+
