@@ -21,6 +21,7 @@ public class CustomerV1Producer {
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());
         properties.put("acks","1");
         properties.put("retries", "10");
+        properties.put("max.in.flight.requests.per.connection", "1"); //order is important use this or use synchronous send
         properties.put("schema.registry.url", "http://192.168.99.100:8081");
         this.topicName = "customer11-avro";
 
